@@ -120,14 +120,49 @@ O(N)
 
 N+2S 
 
-
-
 ------------------------------------------------------------------------------------------
 
+int a;//4 byte -> a variable can hold a single value 
+
+a = 10; 
+
+pf(a); //10 
+
+a = 20 ;
+
+pf(a);//20 
 
 
 
+5 numbers -> addition -> 
+15 numbers -> addition -> 
+115 numbers -> addition -> 
 
+
+array -> 
+    collection of same type of data 
+    1 variable name -> we can store n number of items 
+    conti ... 
+
+int a[5];//array  X X X X X 
+    index 
+    subscript 
+    starts with : 0 
+    ends with :  SIZE - 1 
+
+    first element -> 0th index 
+    a[0]
+
+    second -> 1st index 
+    a[1]
+
+---------------------------------------------------------------    
+Array :- 
+
+1. insert
+2. remove 
+3. display 
+4. exit 
 
 
 
