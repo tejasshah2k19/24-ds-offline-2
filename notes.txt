@@ -164,6 +164,23 @@ Array :-
 3. display 
 4. exit 
 
+10 20 30 40 50 
+
+
+shift(){
+
+    10 20 30 40 50 
+    time=1 
+    50  10  20  30  40
+    
+    how many times you want to shift? 
+    times=2 
+    40 50 10 20 30   
+
+    time=3
+    30  40  50  10  20 
+}
+
 
 
 

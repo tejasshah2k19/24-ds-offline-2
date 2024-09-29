@@ -35,6 +35,14 @@ void insert()
 }
 void removeElement()
 {
+    int location;
+    printf("\nEnter the location that you want to delete? ");
+    scanf("%d", &location); // 2
+
+    for (i = location - 1; i < SIZE; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
 }
 
 // O(N)
@@ -78,8 +86,8 @@ int main()
 
     while (-1)
     {
-        printf("\n1 For Insert\n2 For Remove\n3 For Display");
-        printf("\n4 For Exit\nEnter choice");
+        printf("\n1 For Insert\n2 For Remove\n3 For Display\n4 for exit\n5 for linear search\n6 for Shift");
+        printf("\nEnter choice");
 
         scanf("%d", &choice);
 
@@ -96,7 +104,9 @@ int main()
             break;
         case 4:
             exit(0);
-
+        case 5:
+            linearSearch();
+            break;
         default:
             printf("\nInvalid Choice");
             break;
