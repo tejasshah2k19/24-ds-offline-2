@@ -197,10 +197,28 @@ index -> {[]}} : inValid
 
 
 
+STACK supports _________________ mechanism ? 
+LIFO 
+
+which pointer we use to manage stack ? 
+top 
 
 
+how to check stack is full ? 
+top == SIZE - 1 
 
 
+how to check stack is empty? 
+top == -1 
+
+
+_____________ function is used to insert data in stack. 
+PUSH() 
+
+______________ function is used to remove data from stack.
+POP()
+
+------------------------------------------------------------------
 
 
 

@@ -24,6 +24,20 @@ void push()
 
 void pop()
 {
+    if(top == -1){
+        printf("\nStack is Empty");
+    }else{
+        printf("\n%d pop",stack[top]);
+        top--; 
+    }
+}
+
+void peek(){
+    if(top == -1){
+        printf("\nStack is Empty");
+    }else{
+        printf("\n%d",stack[top]); 
+    }
 }
 
 void display()
@@ -35,6 +49,15 @@ void display()
     }
 }
 
+void peep(){
+    int location;
+    int index; 
+    printf("\nEnter location");
+    scanf("%d",&location);//
+    index = top-location+1;
+
+    printf("\n%d",stack[index]); 
+}
 int main()
 {
     int choice;
