@@ -220,6 +220,65 @@ POP()
 
 ------------------------------------------------------------------
 
+String character array ->
+
+name -> 
+
+char x; //single character -> r / o / y / a / l
+
+
+
+r o y a l  -> total 5 characters 
+
+character array -> 
+
+char x[30]; //royal
+
+
+printf("%s",x);//royalxlkfjdskfhsdkjfhsdkkdsjhf
+            //royal 
+            
+
+---------------------------------------------------------------------
+
+array character array -> 
+        same type  // 
+        static int a[5]; //5 fix  
+    
+    int a[5]; // int -> float => not possible 
+    int float name ->mix type 
+
+
+structure -> is a collection of mix type of data -> 
+          -> struct keyword is used to create a structure 
+          -> tagname -> optional 
+
+
+  movie -> information -> 
+    movieName:char[] 
+    year:int  
+
+
+    1. add movie 
+    2. print all movies 
+    3. search movie 
+    4. sort all movie by year 
+    5. exit 
+    
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
