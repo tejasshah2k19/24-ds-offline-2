@@ -44,6 +44,13 @@ int removeData()
     return del;
 }
 
+void display(){
+        int i;
+        printf("\n===========QUEUE DATA==========\n");
+        for(i=f;i<=r;i++){
+            printf("  %d",q[i]);
+        }
+}
 int main()
 {
     int choice;
@@ -51,7 +58,7 @@ int main()
 
     while (1)
     {
-        printf("\n1 For Add\n2 For Remove\n0 Exit\nEnter choice");
+        printf("\n1 For Add\n2 For Remove\n3 For Display\n0 Exit\nEnter choice");
         scanf("%d", &choice);
 
         switch (choice)
@@ -64,6 +71,9 @@ int main()
         case 2:
             num = removeData();
             printf("\n%d removed", num);
+            break;
+        case 3:
+            display();
             break;
         case 0:
             exit(0);
