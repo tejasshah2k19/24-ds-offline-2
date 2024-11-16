@@ -265,7 +265,32 @@ structure -> is a collection of mix type of data ->
     4. sort all movie by year 
     5. exit 
     
-             
+
+LifO 
+top 
+
+top == -1 => empty 
+top == SIZE - 1 
+
+PUSH 
+POP 
+display 
+PEEK 
+PEEP 
+
+----------------------------------------------------------------
+
+LiFo -> 
+    whatsapp -> 
+    history  -> 
+    gallery  ->
+
+
+FIFO -> First In First Out 
+Line -> QUEUE
+            Printer print -> 
+            
+
 
 
 
