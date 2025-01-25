@@ -314,15 +314,87 @@ str = (((())))
 
 
 ----------------------------------------------------------------
+SMA -> static memory allocation 
+implicit 
+
+1->20byte 
+1000->20,000 byte 
+
+main(){
+
+    int a[10]; //20 byte 
+
+
+    //no need 
 
 
 
 
 
 
+    //end  
+}
+
+DS --> 
+
+
+DMA --> dynamic memory allocation --> 
+    memory allocate 
+    memory release 
+
+
+allocate -> function {calloc(), malloc()} 
+release -> function  {free()}
+        -> function {realloc()} resize 
+
+
+stdlib.h 
+
+
+calloc vs malloc 
+
+calloc -> n number of blocks 
+malloc -> single block 
 
 
 
+
+malloc(2); //total size of block 
+calloc(5,2);//qty , size of block 
+
+
+------------------------------------------------------
+struct ->student 
+
+        name//s  
+        id //s  
+        maths//s 
+        sci//s 
+        eng //s 
+        perc //d 
+        grade //d 
+
+
+struct student s; 
+
+s.name 
+
+
+struct student *s; 
+s = malloc(sizeof(struct student));
+
+
+s->name 
+------------------------------------------------------
+
+
+
+Linked List 
+        1) single linked list  [ data | next ]
+        2) double linked lsit  [ prev | data | next ]
+        3) Circular Linked list [ single / double ]
+
+----------------------------------------------         
 
 
 
