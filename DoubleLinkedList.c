@@ -50,6 +50,35 @@ void display()
     }
 }
 
+ 
+void insertAny(int src, int num)
+{
+    struct node *p = head;
+    struct node *tmp;
+    while (p != NULL)
+    {
+        if (p->data == src)
+        {
+            break;
+        }
+        p = p->next;
+    }
+    if (p == NULL)
+    {
+        printf("\nInvalid Source");
+    }
+    else
+    {
+        tmp = malloc(sizeof(struct node));
+        tmp->data = num;
+        tmp->next = p->next;
+        p->next->prev= tmp; 
+        p->next = tmp;
+        tmp->prev = p; 
+    }
+}
+
+
 int main()
 {
 
@@ -84,11 +113,11 @@ int main()
         // case 5:
         //     sumOfAllNodes();
         //     break;
-        // case 6:
-        //     printf("\nEnter source and data");
-        //     scanf("%d%d", &src, &num);
-        //     insertAny(src, num);
-        //     break;
+        case 6:
+            printf("\nEnter source and data");
+            scanf("%d%d", &src, &num);
+            insertAny(src, num);
+            break;
         // case 7:
         //     deleteEnd();
         //     break;
