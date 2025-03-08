@@ -458,6 +458,233 @@ linked list -> users
 
 
 
+output 
+
+1 For Signup
+2 For Login
+3 For Exit
+Enter your choice: 1
+
+Enter First Name: ram
+Enter Email: ram@gmail.com
+Enter Password: ram
+
+Signup Successful!
+
+1 For Signup
+2 For Login
+3 For Exit
+Enter your choice: 2
+
+Enter Email: ram@gmail.com
+Enter Password: laxman 
+
+Invalid Email or Password!
+
+1 For Signup
+2 For Login
+3 For Exit
+Enter your choice: 2
+
+Enter Email: ram@gmail.com
+Enter Password: ram
+
+Login Successful! Welcome, ram
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 3
+
+Current Balance: Γé╣ 0
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 0
+
+Enter Account Name: Cash
+Enter Initial Balance: 25000
+
+Account Created Successfully with 25000 amount !
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 3
+
+Current Balance: Γé╣ 25000
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 1
+
+Enter Expense Title: Rec
+Enter Expense Amount: 5000
+
+Expense Added Successfully!
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 2
+
+===================================
+        Expense List
+===================================
+| No  | Title                | Amount     |
+-----------------------------------
+| 1   | Rec                  | Γé╣5000 |
+===================================
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 3
+
+Current Balance: Γé╣ 20000
+
+0. Add Account
+1. Add Expense
+2. List Expenses
+3. Check Balance
+4. Logout
+Enter your choice: 4
+
+Logging Out...
+
+1 For Signup
+2 For Login
+3 For Exit
+Enter your choice: 1
+
+Enter First Name: laxman
+Enter Email: ram@gmail.com
+
+Error: Email already registered! Try a different one.
+
+1 For Signup
+2 For Login
+3 For Exit
+Enter your choice: 3
+
+Exiting Program...
+
+
+
+
+-----------------------------------------------
+
+
+recursion -> function calling itself 
+
+
+void add(){
+
+}
+
+void sub(){
+    add(); //function calling another function 
+}
+
+
+
+void mul(){
+    mul();//function calling itself --recursion 
+}
+
+
+
+
+
+
+
+void fact(int n){
+    int ans = 1; 
+    for(i=1;i<=n;i++)
+        ans = ans * i;         
+    return ans;
+
+}
+
+
+
+int factorial(int n) {
+    if (n == 0 || n == 1)  
+        return 1;   
+    return n * factorial(n - 1);  // Recursive call
+}
+
+
+Base Case 
+
+
+
+
+
+void print(int n){//5 40   
+
+    if(n!=0){ 
+        printf("\nRoyal");//royal royal royal royal royal      
+        n=n-1; //4 3 2  1 0 
+        print(n);//4 3 0
+    }
+}
+
+
+
+print(5);
+
+
+mulTable -> 10 -> 
+
+
+
+------------------------------------------------
+
+
+find max from array using recursion  ~ 
+
+max(a,i,size)
+max(array,0,5); 
+------------------------------------------------
+
+
+array -> element -> presnet / not present -> search 
+
+------------------------------------------------
+
+sumOfDigits(2654);
+17 
+sumOfDigits(26);
+8
+
+--------------------------------------------------
+
+Tree -> non linear ds 
+
+
+
+
+
+
+
+
+
+
 
 
 
