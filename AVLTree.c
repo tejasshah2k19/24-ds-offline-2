@@ -45,6 +45,26 @@ int calculateBF(struct node *root)
     return lh - rh;
 }
 
+struct node *leftRotate(struct node *root)
+{
+    struct node *newRoot = root->right;
+    root->right = newRoot->left;
+    newRoot->left = root;
+    root->height = calculateHeight(root);
+    newRoot->height = calculateHeight(newRoot);
+    return newRoot;
+}
+
+struct node *rightRotate(struct node *root)
+{
+    struct node *newRoot = root->left;
+    root->left = newRoot->right;
+    newRoot->right = root;
+    root->height = calculateHeight(root);
+    newRoot->height = calculateHeight(newRoot);
+    return newRoot;
+}
+
 struct node *addNode(struct node *root, int num)
 { // root:NULL,10
     if (root == NULL)
@@ -60,7 +80,7 @@ struct node *addNode(struct node *root, int num)
         // right
         root->right = addNode(root->right, num);
     }
-    else
+    else if (num < root->data)
     {
         root->left = addNode(root->left, num);
     }
@@ -69,30 +89,42 @@ struct node *addNode(struct node *root, int num)
 
     int bf = calculateBF(root);
 
-   
-    
-    if (bf < -1 )
+    if (bf < -1)
     {
         printf("R");
 
-        if(root->right->data < num){
-            printf("R");
-        }else{
-            printf("L");
-        }
-        printf("\n %d %d\n", root->data, bf);
-        
-    }else if(bf>1){
-        printf("L");
-        if(root->left->data < num)
+        if (root->right->data < num)
         {
             printf("R");
-        }else{
+
+            // 30
+            return leftRotate(root);
+        }
+        else
+        {
             printf("L");
+            root->right = rightRotate(root->right);
+            return leftRotate(root);
         }
         printf("\n %d %d\n", root->data, bf);
     }
-    
+    else if (bf > 1)
+    {
+        printf("L");
+        if (root->left->data < num)
+        {
+            printf("R");
+            root->left = leftRotate(root->left);
+            return rightRotate(root);
+        }
+        else
+        {
+            printf("L");
+
+            return rightRotate(root);
+        }
+        printf("\n %d %d\n", root->data, bf);
+    }
 
     return root;
 }
@@ -112,9 +144,9 @@ int main()
 {
 
     // RR
-        //  root = addNode(root, 30);
-        // root = addNode(root, 50);
-        // root = addNode(root, 200);
+    // root = addNode(root, 30);
+    // root = addNode(root, 50);
+    // root = addNode(root, 200);
 
     // LL
     //  root = addNode(root, 200);
@@ -126,13 +158,11 @@ int main()
     // root = addNode(root, 30);
     // root = addNode(root, 50);
 
-
     // RL
-    // root = addNode(root, 30);
-    // root = addNode(root, 200);
-    // root = addNode(root, 50);
+    root = addNode(root, 30);
+    root = addNode(root, 200);
+    root = addNode(root, 50);
 
-
-    //   inOrder(root);
+    inOrder(root);
     return 0;
 }
